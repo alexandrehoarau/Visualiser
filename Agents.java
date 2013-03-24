@@ -66,7 +66,7 @@ public class Agents{
 			
 			URL url = null;
 			
-			url = new URL("http://"+adresse_serveur+"/IC4/home.php");
+			url = new URL("http://"+adresse_serveur+"/Web/home.php");
 			
 								
 			//monUrl.openConnection c'est un URLConnection mais on fait un cast en HttpURLConnection pour
