@@ -7,7 +7,7 @@
 	<body>
 
 <?php
-
+//Suppression des Machines déconnectées
 	header('Content-Type: text/html; charset=utf-8');
 	$link = mysql_connect("localhost","root","root");
 	mysql_select_db("Visualiser",$link);
