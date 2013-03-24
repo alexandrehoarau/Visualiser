@@ -85,9 +85,9 @@ $rs=mysql_fetch_row($query);
 	 	
 	 			if($notif>=0 && $notif <3){
 	 				$etat = "connecté";
-	 			}elseif($notif>=3 && $notif<15){
-	 				$etat = "update";
-	 			}elseif($notif>=15 &&$notif <45){
+	 			}elseif($notif>=3 && $notif<=15){
+	 				$etat = "Update";
+	 			}elseif($notif>15 &&$notif <45){
 	 				$etat = "Attente";
 	 			}elseif($notif>=45){
 	 				$etat = "Déconnecté";
@@ -114,19 +114,19 @@ $rs=mysql_fetch_row($query);
 						?>
 						<script type="text/javascript">
 						$(function(){
-    					toastr.success('Connexion de la Machine','<?php echo $nom ?>');
+    					toastr.success('Nouvelle Mise à jour','<?php echo $nom ?>');
 						});
 						</script>
 
 					
 				<?php
 					
-				}elseif($etat == "update"){
+				}elseif($etat == "Update"){
 					echo "<a href='info.php?adresse=".$ip."'><img src='img/add.png' width=35%></img></a></td>";
 				?>
 				<script type="text/javascript">
 						$(function(){
-    					toastr.info('Mise à Jour','<?php echo $nom ?>'); // Display a info toast, with no title
+    					toastr.info('Connecté, Attente de mise à jour','<?php echo $nom ?>'); // Display a info toast, with no title
 						});
 						</script>
 				<?php
@@ -136,7 +136,7 @@ $rs=mysql_fetch_row($query);
 
 						<script type="text/javascript">
 						$(function(){
-    					toastr.warning('Attente de réponse de la Machine','<?php echo $nom ?>'); // Display a info toast, with no title
+    					toastr.warning('Etat Inconnu, Attente de réponse de la Machine','<?php echo $nom ?>'); // Display a info toast, with no title
 						});
 						</script>
 					<?php
@@ -149,7 +149,7 @@ $rs=mysql_fetch_row($query);
 						?>
 						<script type="text/javascript">
 						$(function(){
-    					toastr.error('Deconnexion de la Machine','<?php echo $nom ?>'); // Display a info toast, with no title
+    					toastr.error('Machine Déconnectée','<?php echo $nom ?>'); // Display a info toast, with no title
 						});
 						</script>
 
