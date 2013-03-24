@@ -7,6 +7,7 @@
 <html>
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
 		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -120,7 +121,7 @@ $(function() {
 })
 </script>
 
-    <div id="test">
+    <div id="content">
     	<?
 include('socket.php');
 ?>
@@ -142,22 +143,22 @@ include('socket.php');
 
       	<div class="slidingDiv1">	
       		
-	      	<table id='user' cellpadding='0' cellspacing='0'>
+	      	<table id='user_infos' cellpadding='0' cellspacing='0'>
 			   <thead> <!-- En-tête du tableau -->
 			       <tr id='legende'>
-			           <th class='bd'>Nom</th>
-			           <th class='bd'>Système d'exploitation</th>
-			           <th class='bd'>Espace total</th>
-			           <th class='bd'>Espace libre</th>
+			           <th class='bd_infos'>Nom</th>
+			           <th class='bd_infos'>OS</th>
+			           <th class='bd_infos'>Espace total</th>
+			           <th class='bd_infos'>Espace libre</th>
 			       </tr>
 			   </thead>
 			 
 			   <tbody> <!-- Corps du tableau -->
 			       <tr id='prod'>
-			           <td><?php echo $nom?></td>
-			           <td><?php echo $os?></td>
-			           <td><?php echo $total_espace ?>Go</td>
-			           <td><?php echo $espace_utilisable ?> Go</td>
+			           <td width="20%"><?php echo $nom?></td>
+			           <td width="20%"><?php echo $os?></td>
+			           <td width="20%"><?php echo $total_espace ?>Go</td>
+			           <td width="20%"><?php echo $espace_utilisable ?> Go</td>
 			       </tr>
 			   </tbody>
 			</table>
@@ -167,20 +168,20 @@ include('socket.php');
 		 <button type='submit' class='show_hide2'>Réseau</button>
 
 		<div class="slidingDiv2">
-	      	<table id='user' cellpadding='0' cellspacing='0'>
+	      	<table id='user_infos' cellpadding='0' cellspacing='0'>
 			   <thead> <!-- En-tête du tableau -->
-			       <tr id='legende'>
-			           <th class='bd'>Adresse MAC</th>
-			           <th class='bd'>Adresse IP</th>
-			           <th class='bd'>Interfaces Réseaux</th>
+			       <tr id='legende_infos'>
+			           <th class='bd_infos'>Adresse MAC</th>
+			           <th class='bd_infos'>Adresse IP</th>
+			           <th class='bd_infos'>Interfaces Réseaux</th>
 			       </tr>
 			   </thead>
 			 
 			   <tbody> <!-- Corps du tableau -->
 			       <tr id='prod'>
-			           <td><?php echo $addmac ?></td>
-			           <td><?php echo $adresse?></td>
-			           <td><?php echo $interface ?></td>
+			           <td width="30%"><?php echo $addmac ?></td>
+			           <td width="30%"><?php echo $adresse?></td>
+			           <td width="30%"><?php echo $interface ?></td>
 			       </tr>
 			   </tbody>
 			</table>
@@ -190,12 +191,12 @@ include('socket.php');
 		 <button type='submit' class='show_hide3'>Supervision</button>
 
       	<div class="slidingDiv3">
-	      	<table id='user' cellpadding='0' cellspacing='0'>
+	      	<table id='user_infos' cellpadding='0' cellspacing='0'>
 			   <thead> <!-- En-tête du tableau -->
 			       <tr tr id='legende' >
-			           <th width="50%">Dernière Mise à jour</th>
+			           <th width="50%" class='bd_infos'>Dernière Mise à jour</th>
 
-			           <th width="50%">Etat</th>
+			           <th width="50%" class='bd_infos'>Etat</th>
 			       </tr>
 			   </thead>
 			 
