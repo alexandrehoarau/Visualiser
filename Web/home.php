@@ -13,6 +13,7 @@
 <script type="text/javascript" src="toastr.js"></script>
 <link rel="Stylesheet" href="toastr.css" />
 		<script type="text/javascript">
+//Author : Alexandre HOARAU
 		$(function() {
 	grid = $('#user');
 
