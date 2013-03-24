@@ -1,4 +1,6 @@
 <?php
+
+//Création de la socket pour l'échanges d'informations avec la socket en JAVA
  $adresse = $_GET['adresse'];
  $PORT = 20222; //the port on which we are connecting to the "remote" machine
  $HOST = $adresse; //the ip of the remote machine (in this case it's the same machine)
@@ -16,7 +18,7 @@
  $reply = socket_read($sock, 10000000, PHP_NORMAL_READ) //Reading the reply from socket
          or die("error: failed to read from socket\n");
  
- //echo $reply;
+ //Récupération des informations supplémentaires
  $info = explode("&", $reply);
  $nom = $info[0];
  $adresse = $info[1];
@@ -30,7 +32,6 @@ $os_version = $info[8];
 $interface = $info[9];
 
 //echo $interface;
-
 $notif = (time() - $time);
 if($notif <30){
 
