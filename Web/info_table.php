@@ -142,18 +142,7 @@ $rs=mysql_fetch_row($query);
 					<?php
 
 				}else{
-
-					echo "<a href='remove.php?adresse=".$ip."' id='remove'><img src='img/del.png' width=37%></img></a></td>";
-					
-					
-						?>
-						<script type="text/javascript">
-						$(function(){
-    					toastr.error('Machine Déconnectée','<?php echo $nom ?>'); // Display a info toast, with no title
-						});
-						</script>
-
-						<?
+					echo "<a href='remove.php?".$requete."' id='remove'><img src='img/del.png' width=37%></img></a></td>";	
 					
 				}
 	}
