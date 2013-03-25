@@ -1,4 +1,3 @@
-
 <html>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	
@@ -10,11 +9,12 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src=" sorttable.js "></script> 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="toastr.js"></script>
-<link rel="Stylesheet" href="toastr.css" />
+		<script type="text/javascript" src="toastr.js"></script>
+		<link rel="Stylesheet" href="toastr.css" />
 		<script type="text/javascript">
-//Author : Alexandre HOARAU
-		$(function() {
+	
+	//Author : Alexandre HOARAU
+	$(function() {
 	grid = $('#user');
 
 	// handle search fields key up event
@@ -34,75 +34,72 @@
 		else 
 			grid.find('tr').show(); 
 
-	});
-});	
+			});
+		});	
+				</script>
+		<script>
+		    $(function() {
+		      $("#refresh").click(function(evt) {
+		         $("#randomdiv").load("index.php")
+		         evt.preventDefault();
+		      })
+		    })
 		</script>
-<script>
-    $(function() {
-      $("#refresh").click(function(evt) {
-         $("#randomdiv").load("index.php")
-         evt.preventDefault();
-      })
-    })
-</script>
 	</head>
 
 	<body>
-<script>
-$(function() {
-  $("#scan").click(function() {
-
-     $("#info").load("info_table.php");
-
-  })
-})
-</script>
-<script>
-$(function() {
-  $("#remove").click(function() {
-     $("#info").load("info_table.php");
-     
-  })
-})
-</script>
-
-    <div id="test">
-	<div id="header">
-		<div id='cssmenu'>
-			<div id="header-title">
-			Visualiser
-		</div>
-			<ul>
-			   <li><a href='home.php'><span>Home</span></a></li>
-			    <li><a href='contact.php'><span>Contact</span></a></li>
-			 
-			</ul>
-		</div>
-
-
-	</div>
-
+	
+		<script>
+			$(function() {
+			  $("#scan").click(function() {
+			
+			     $("#info").load("info_table.php");
+			
+			  })
+			})
+			</script>
+			<script>
+			$(function() {
+			  $("#remove").click(function() {
+			     $("#info").load("info_table.php");
+			     
+			  })
+			})
+		</script>
+		
+		<div id="test">
+			<div id="header">
+				<div id='cssmenu'>
+					<div id="header-title">
+					Visualiser
+					</div>
+					<ul>
+					   <li><a href='home.php'><span>Home</span></a></li>
+					    <li><a href='contact.php'><span>Contact</span></a></li>
+					</ul>
+				</div>
+			</div>
+		
 		<form class='form-wrapper cf'>
-        <input type='text' placeholder='Nom de Machine...' required id='search-term'></input>
-        <button type='submit'>Search</button>
-    </form> 
-    <form class='scan_button'>
-        <button type='submit' id="scan">Scan</button>
-    </form> 
-		<div id='info'>
-
-
+		        <input type='text' placeholder='Nom de Machine...' required id='search-term'></input>
+		        <button type='submit'>Search</button>
+		</form> 
+		
+		<form class='scan_button'>
+			<button type='submit' id="scan">Scan</button>
+		</form> 
+				<div id='info'>
+		
+		
 		<?php
 		$_SESSION['mail']=0;
 		include('info_table.php');
 		?>
-
-		
-		
+						
 		</div>
-	<div class='footer'>
+		<div class='footer'>
 			Copyright © All Rights Reserved - HOARAU Alexandre & TETIA THOMAS
-	</div>
-
-</body>
+		</div>
+	
+	</body>
 </html>
