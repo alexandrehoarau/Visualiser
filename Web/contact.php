@@ -29,8 +29,8 @@
 
 	</div>
 
-	<form action ="formmail.php" method="POST">
-		<table>
+	<form action ="formmail.php" method="POST" id="mail">
+		<table id="user_mail" cellpadding='0' cellspacing='0'>
 			<tr>
 				<td><label="nom">Nom</label></td>
 				<td><input type="text" name="nom"/></td>
@@ -48,7 +48,7 @@
 				<td><textarea COLS="70" ROWS="5" name="message"></textarea></td>
 			</tr>
 		</table>
-		<input type="submit" name="send" value="Envoyer"/>
+		<button type="submit" name="send" value="Envoyer">Envoyer</button>
 	</form>
 
 
