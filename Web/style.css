@@ -55,6 +55,9 @@ margin-top: 2%;
 }
 .footer{
 	margin-top: 20%;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
 }
 #legende{
 	color: #0C2C52;
