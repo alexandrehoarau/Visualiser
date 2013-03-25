@@ -50,21 +50,21 @@
 	<body>
 	
 		<script>
-		$(function() {
-		  $("#scan").click(function() {
-		
-		     $("#info").load("info_table.php");
-		
-		  })
-		})
-		</script>
-		<script>
-		$(function() {
-		  $("#remove").click(function() {
-		     $("#info").load("info_table.php");
-		     
-		  })
-		})
+			$(function() {
+			  $("#scan").click(function() {
+			
+			     $("#info").load("info_table.php");
+			
+			  })
+			})
+			</script>
+			<script>
+			$(function() {
+			  $("#remove").click(function() {
+			     $("#info").load("info_table.php");
+			     
+			  })
+			})
 		</script>
 		
 		<div id="test">
