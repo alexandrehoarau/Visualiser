@@ -132,7 +132,7 @@ include('socket.php');
 		</div>
 			<ul>
 			   <li><a href='home.php'><span>Home</span></a></li>
-			  
+			  <li><a href='contact.php'><span>Contact</span></a></li>
 			</ul>
 		</div>
 
