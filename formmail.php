@@ -27,6 +27,7 @@
 					mail($to, $subject, $message,$header);
 
 					echo 'Votre message à été envoyé';
+					echo '<meta http-equiv="refresh" content="2; URL=home.php">';
 
 					}else{
 					echo '<a href ="mail.php">';				//Si non, on retourne un message d'erreur qui indique à l'utilisateur qu'il na pas remplis tous les champs
